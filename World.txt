@@ -1,8 +1,8 @@
 1. select count(name) from city where countrycode = 'USA';
 2. select population, lifeexpectancy from country where name = 'argentina';
 3. select name from country where lifeexpectancy is not null order by lifeexpectancy desc limit 1;
-4.
-5.
+4. 
+5. 
 6. select name from city where name like 'F%' limit 25;
 7. 
 8. select name, population from country where population != '' order by population asc limit 1;
@@ -10,5 +10,11 @@
 10. select name from country order by surfacearea desc limit 10;
 11. select name from city where countrycode = 'JPN' order by population desc limit 5;
 12. select name from country where headofstate = 'elisabeth II';
-13. select name, population/surfacearea as populationratio from country order by populationratio asc limit 10; (x)
-14. select count 
+13. select name, population/surfacearea as populationratio from country where population/surfacearea >0 order by populationratio asc limit 10;
+14. select count(distinct language) from countrylanguage;
+15. select name, GNP from country order by GNP desc limit 10;
+16. select max(count(countrycode from countrylanguage))
+17. select countrycode from countrylanguage where (x)
+18. select name, MIN(lifeexpectancy) from country where lifeexpectancy>0; (x)
+19. select governmentform count(governmentform) from country; (x)
+20. select count(name,indepyear from country where indepyear !=''); (x)
