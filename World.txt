@@ -1,0 +1,2 @@
+2. select population, lifeexpectancy from country where name = 'argentina';
+3.
